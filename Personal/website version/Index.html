@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Tracker</h1>
+        
+        <div class="summary">
+            <h2>Budget Summary</h2>
+            <p id="balance">Current Balance: $0.00</p>
+            <p id="savingsGoal">Savings Goal: $0.00</p>
+            <input type="number" id="savingsGoalInput" placeholder="Set Savings Goal" />
+            <button onclick="setSavingsGoal()">Set Goal</button>
+            <button onclick="resetBudget()">Reset Budget</button>
+        </div>
+
+        <div class="form">
+            <h2>Add Item</h2>
+            <input type="text" id="name" placeholder="Name" />
+            <input type="number" id="amount" placeholder="Amount" />
+            <select id="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <input type="text" id="categoryOrSource" placeholder="Category or Source" />
+            <button onclick="addItem()">Add Item</button>
+        </div>
+
+        <div class="items">
+            <h2>Budget Items</h2>
+            <ul id="itemsList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
